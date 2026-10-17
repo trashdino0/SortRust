@@ -1,0 +1,12 @@
+[workspace]
+members = ["crates/sort-core", "crates/sort-cli"]
+resolver = "2"
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+debug = true

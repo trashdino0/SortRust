@@ -1,0 +1,19 @@
+[package]
+name = "sort-cli"
+version = "0.1.0"
+edition = "2021"
+description = "Benchmark CLI for sort-core (warmed release runs, -a N stats, hash verification)"
+license = "MIT"
+
+[[bin]]
+name = "sort-bench"
+path = "src/main.rs"
+
+[dependencies]
+sort-core = { path = "../sort-core" }
+clap = { version = "4", features = ["derive"] }
+anyhow = "1"
+rayon = "1"
+rand = "0.8"
+sha2 = "0.10"
+mimalloc = "0.1"
